@@ -1,0 +1,33 @@
+{
+  "name": "doubleleft/hook-platform",
+  "description": "Hook Platform",
+  "keywords": ["hook", "platform", "doubleleft"],
+  "license": "MIT",
+  "authors": [{
+    "name": "Endel Dreyer",
+    "email": "edreyer@doubleleft.com"
+  }],
+  "autoload": {
+    "classmap": ["controllers"],
+    "psr-0": {}
+  },
+  "repositories": [{
+    "type": "git",
+    "url": "https://github.com/doubleleft/hook.git"
+  }],
+  "require": {
+    "php": ">=5.3.0",
+    "doubleleft/hook": "dev-dev as 0.2.0",
+    "dearon/slim-mustache": "dev-master"
+  },
+  "require-dev": {
+    "composer/composer": "dev-master",
+    "mockery/mockery": "0.8.0",
+    "phpunit/phpunit": "3.7.*"
+  },
+  "scripts": {
+    "post-install-cmd": [ ]
+  },
+  "bin-dir": "bin",
+  "minimum-stability": "dev"
+}
