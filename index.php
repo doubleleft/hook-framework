@@ -36,7 +36,11 @@ if (!$app->request->headers->get('X-App-Id')) {
 Hook\Http\Router::setInstance($app);
 Hook\Http\Router::setup($app);
 
+class_alias('Hook\\Http\\Input', 'Input');
+class_alias('Hook\\Http\\Request', 'Request');
+
 $app->config("templates.path", "views");
-$app->config("view", new Slim\Mustache\Mustache());
+$app->config("templates.helpers_path", __DIR__ . '/helpers');
+$app->config("view", new Hook\Platform\View());
 require 'routes.php';
 $app->run();

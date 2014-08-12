@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c2f9d3749cd0b0c3b84d265f1ac27447",
+    "hash": "dda110e5b0cf38fff0639c255419afa8",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -122,53 +122,6 @@
                 "sockets"
             ],
             "time": "2014-06-08 15:19:45"
-        },
-        {
-            "name": "dearon/slim-mustache",
-            "version": "dev-master",
-            "target-dir": "Slim/Mustache",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Dearon/Slim-Mustache.git",
-                "reference": "9bf15760ab893b0f5c299d847139888f9e6b5e6f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Dearon/Slim-Mustache/zipball/9bf15760ab893b0f5c299d847139888f9e6b5e6f",
-                "reference": "9bf15760ab893b0f5c299d847139888f9e6b5e6f",
-                "shasum": ""
-            },
-            "require": {
-                "mustache/mustache": ">=2.5.1",
-                "php": ">=5.3.0",
-                "slim/slim": ">=2.4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Slim\\Mustache": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Remco Meeuwissen",
-                    "email": "dearon@gmail.com",
-                    "homepage": "http://www.dearon.com/"
-                }
-            ],
-            "description": "Mustache View Parser package for the Slim Framework",
-            "homepage": "http://github.com/dearon/Slim-Mustache",
-            "keywords": [
-                "extensions",
-                "mustache",
-                "slimphp",
-                "templating"
-            ],
-            "time": "2014-06-06 20:12:29"
         },
         {
             "name": "doctrine/annotations",
@@ -657,7 +610,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doubleleft/hook.git",
-                "reference": "75cbcfacdd1ec6045d5f7c445a2c2f4855ab1cc8"
+                "reference": "dce1be38b7b90a99ffd50636ba8ff8950d8b7cf3"
             },
             "require": {
                 "aws/aws-sdk-php": "2.5.*",
@@ -709,7 +662,7 @@
                 "doubleleft",
                 "hook"
             ],
-            "time": "2014-08-11 21:47:16"
+            "time": "2014-08-11 22:52:38"
         },
         {
             "name": "dropbox/dropbox-sdk",
@@ -1387,51 +1340,6 @@
             "time": "2014-05-29 10:27:23"
         },
         {
-            "name": "mustache/mustache",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/bobthecow/mustache.php.git",
-                "reference": "1430ca884912eaba2b3830856b45685733b16789"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/mustache.php/zipball/1430ca884912eaba2b3830856b45685733b16789",
-                "reference": "1430ca884912eaba2b3830856b45685733b16789",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.2.4"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Mustache": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Justin Hileman",
-                    "email": "justin@justinhileman.info",
-                    "homepage": "http://justinhileman.com"
-                }
-            ],
-            "description": "A Mustache implementation in PHP.",
-            "homepage": "https://github.com/bobthecow/mustache.php",
-            "keywords": [
-                "mustache",
-                "templating"
-            ],
-            "time": "2014-06-20 19:34:49"
-        },
-        {
             "name": "nesbot/carbon",
             "version": "1.10.0",
             "source": {
@@ -1988,6 +1896,53 @@
             "description": "Symfony Security Component - Core Library",
             "homepage": "http://symfony.com",
             "time": "2014-08-04 10:16:36"
+        },
+        {
+            "name": "zordius/lightncandy",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zordius/lightncandy.git",
+                "reference": "c271e73105bea5b316be6263fd4ca6dfb43bf5fc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zordius/lightncandy/zipball/c271e73105bea5b316be6263fd4ca6dfb43bf5fc",
+                "reference": "c271e73105bea5b316be6263fd4ca6dfb43bf5fc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.0.17"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/lightncandy.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Zordius Chen",
+                    "email": "zordius@yahoo-inc.com"
+                }
+            ],
+            "description": "An extremely fast PHP implementation of handlebars ( http://handlebarsjs.com/ ) and mustache ( http://mustache.github.io/ ).",
+            "homepage": "https://github.com/zordius/lightncandy",
+            "keywords": [
+                "handlebars",
+                "logicless",
+                "mustache",
+                "php",
+                "template"
+            ],
+            "time": "2014-08-08 05:16:47"
         }
     ],
     "packages-dev": [
@@ -2753,17 +2708,12 @@
         }
     ],
     "aliases": [
-        {
-            "alias": "0.2.0",
-            "alias_normalized": "0.2.0.0",
-            "version": "dev-dev",
-            "package": "doubleleft/hook"
-        }
+
     ],
     "minimum-stability": "dev",
     "stability-flags": {
         "doubleleft/hook": 20,
-        "dearon/slim-mustache": 20,
+        "zordius/lightncandy": 20,
         "composer/composer": 20
     },
     "platform": {

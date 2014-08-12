@@ -1,12 +1,14 @@
 <?php
 
-class HomeController extends Hook\Controllers\HookController {
+class HomeController extends Hook\Platform\Controller {
 
     public function __construct() { }
 
     public function index() {
+        $wats = Hook\Model\App::collection('wats')->all();
         $this->view('index', array(
-            'items' => Hook\Model\App::collection('wats')->all()
+            'item' => $wats[0],
+            'items' => $wats,
         ));
     }
 

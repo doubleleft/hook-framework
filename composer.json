@@ -9,7 +9,9 @@
   }],
   "autoload": {
     "classmap": ["controllers"],
-    "psr-0": {}
+    "psr-0": {
+      "Hook\\Platform": "src"
+    }
   },
   "repositories": [{
     "type": "git",
@@ -17,8 +19,8 @@
   }],
   "require": {
     "php": ">=5.3.0",
-    "doubleleft/hook": "dev-dev as 0.2.0",
-    "dearon/slim-mustache": "dev-master"
+    "doubleleft/hook": "dev-dev",
+    "zordius/lightncandy": "dev-master"
   },
   "require-dev": {
     "composer/composer": "dev-master",
