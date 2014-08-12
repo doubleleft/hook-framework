@@ -610,7 +610,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doubleleft/hook.git",
-                "reference": "dce1be38b7b90a99ffd50636ba8ff8950d8b7cf3"
+                "reference": "bd708865cd8359448ee5f93a8144f75063318867"
             },
             "require": {
                 "aws/aws-sdk-php": "2.5.*",
@@ -662,7 +662,7 @@
                 "doubleleft",
                 "hook"
             ],
-            "time": "2014-08-11 22:52:38"
+            "time": "2014-08-12 19:11:03"
         },
         {
             "name": "dropbox/dropbox-sdk",
