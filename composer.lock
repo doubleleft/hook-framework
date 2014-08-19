@@ -410,12 +410,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "6d0b0486bd6284d0886fef22fea164f7349990fb"
+                "reference": "f61840a697a6b0a83812caeddc7395e28995b530"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/6d0b0486bd6284d0886fef22fea164f7349990fb",
-                "reference": "6d0b0486bd6284d0886fef22fea164f7349990fb",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/f61840a697a6b0a83812caeddc7395e28995b530",
+                "reference": "f61840a697a6b0a83812caeddc7395e28995b530",
                 "shasum": ""
             },
             "require": {
@@ -473,7 +473,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2014-08-05 18:04:50"
+            "time": "2014-08-18 14:09:13"
         },
         {
             "name": "doctrine/inflector",
@@ -639,14 +639,10 @@
                 "classmap": [
                     "src"
                 ],
-                "psr-0": [
-
-                ]
+                "psr-0": []
             },
             "scripts": {
-                "post-install-cmd": [
-
-                ]
+                "post-install-cmd": []
             },
             "license": [
                 "MIT"
@@ -1903,12 +1899,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zordius/lightncandy.git",
-                "reference": "c271e73105bea5b316be6263fd4ca6dfb43bf5fc"
+                "reference": "a90643ea915c372abab45c224f665d90d2e484ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zordius/lightncandy/zipball/c271e73105bea5b316be6263fd4ca6dfb43bf5fc",
-                "reference": "c271e73105bea5b316be6263fd4ca6dfb43bf5fc",
+                "url": "https://api.github.com/repos/zordius/lightncandy/zipball/a90643ea915c372abab45c224f665d90d2e484ef",
+                "reference": "a90643ea915c372abab45c224f665d90d2e484ef",
                 "shasum": ""
             },
             "require": {
@@ -1942,7 +1938,7 @@
                 "php",
                 "template"
             ],
-            "time": "2014-08-08 05:16:47"
+            "time": "2014-08-14 09:53:25"
         }
     ],
     "packages-dev": [
@@ -2707,19 +2703,16 @@
             "time": "2014-08-05 09:07:51"
         }
     ],
-    "aliases": [
-
-    ],
+    "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
         "doubleleft/hook": 20,
         "zordius/lightncandy": 20,
         "composer/composer": 20
     },
+    "prefer-stable": false,
     "platform": {
         "php": ">=5.3.0"
     },
-    "platform-dev": [
-
-    ]
+    "platform-dev": []
 }

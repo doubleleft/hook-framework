@@ -17,12 +17,28 @@ $app->config('paths', require(__DIR__ . '/config/paths.php'));
 
 require __DIR__ . '/vendor/doubleleft/hook/src/bootstrap/connection.php';
 
+// setup custom pagination environment
+$connection = \DLModel::getConnectionResolver()->connection();
+$connection->setPaginator(new Hook\Platform\Environment());
+
 // Set application key
 $app_key = null;
 $config_keys = __DIR__ . '/config/keys.php';
 
 // auto-set app_id/key
-if (!$app->request->headers->get('X-App-Id')) {
+if (!$app->request->headers->get('X-App-Id'))
+{
+    // Create default application if it doesn't exists
+    if (Hook\Model\AppKey::count() == 0)
+    {
+        $application = Hook\Model\App::create(array('name' => "Application"));
+
+        // Migrate application tables
+        Hook\Database\AppContext::setKey($application->keys[0]);
+        Hook\Database\AppContext::migrate();
+        Hook\Database\AppContext::setTablePrefix('');
+    }
+
     if ($app->request->isAjax()) {
         $app_key = Hook\Model\AppKey::where('type', Hook\Model\AppKey::TYPE_BROWSER)->first();
     } else {
@@ -39,7 +55,7 @@ Hook\Http\Router::setup($app);
 class_alias('Hook\\Http\\Input', 'Input');
 class_alias('Hook\\Http\\Request', 'Request');
 
-$app->config("templates.path", "views");
+$app->config("templates.path", $app->config('paths')['root'] . "views");
 $app->config("templates.helpers_path", __DIR__ . '/helpers');
 $app->config("view", new Hook\Platform\View());
 require 'routes.php';

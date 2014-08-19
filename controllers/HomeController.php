@@ -9,10 +9,14 @@ class HomeController extends Hook\Platform\Controller {
             var_dump(Input::get());
         }
 
-        $wats = Hook\Model\App::collection('wats')->all();
+        Hook\Model\App::collection('items')->create(array(
+            'name' => "Item " . rand()
+        ));
+
+        $items = Hook\Model\App::collection('items');
         $this->view('index', array(
-            'item' => $wats[0],
-            'items' => $wats,
+            'item' => $items->first(),
+            'items' => $items->paginate(),
         ));
     }
 

@@ -1,0 +1,15 @@
+{{#if links}}
+  <ul>
+    {{#first}}
+      <li class="first"><a href="?page=1">First</a></li>
+    {{/first}}
+
+    {{#links}}
+      <li class="{{#current}}current{{/current}}"><a href="?page={{ i }}">{{ label }}</a></li>
+    {{/links}}
+
+    {{#last}}
+      <li class="last"><a href="?page={{i}}">Last</a></li>
+    {{/last}}
+  </ul>
+{{/if}}

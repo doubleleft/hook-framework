@@ -29,12 +29,10 @@ class View extends \Slim\View
     }
 
     protected function getTemplate($name) {
-        $dir = $this->getTemplatesDirectory();
-
         foreach ($this->extensions as $ext) {
-            $fn = "$dir/$name$ext";
-            if (file_exists($fn)) {
-                return file_get_contents($fn);
+            $path = $this->getTemplatePathname($name . $ext);
+            if (file_exists($path)) {
+                return file_get_contents($path);
             }
         }
 
