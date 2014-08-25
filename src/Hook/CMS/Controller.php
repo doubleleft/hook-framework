@@ -9,13 +9,14 @@ use Hook\Http\Request;
 class Controller extends BaseController
 {
 
-    public function before()
+    protected function before()
     {
-        if (Cookie::get('admin') == 1) {
-            $this->view->set('admin', 1);
+        if (Cookie::get('is_admin') == 1) {
+            $this->view->set('is_admin', 1);
         }
 
         $this->view->helpers->set('block', 'Hook\\CMS\\Helper::block');
+        $this->view->setTemplatesDirectory(__DIR__ . '/views');
     }
 
     public function index()

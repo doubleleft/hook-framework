@@ -1,0 +1,6 @@
+#
+# Seed for cms_pages
+#
+data:
+  - { name: '404' }
+  - { name: 'home', slug: '/', layout: 'main' }

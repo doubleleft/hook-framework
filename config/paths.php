@@ -2,5 +2,6 @@
 
 return array(
     'root' => __DIR__ . '/../',
-    'storage' => 'storage',
+    'public' => __DIR__ . '/public',
+    'storage' => 'public/storage',
 );

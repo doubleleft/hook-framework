@@ -1,4 +1,3 @@
 <?php
 
-$app->any('/', 'HomeController:index');
-$app->any('/cms', 'CmsController:index');
+Router::mount('/admin', 'Hook\CMS\Controllers\AdminController');

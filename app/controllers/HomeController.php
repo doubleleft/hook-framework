@@ -1,6 +1,7 @@
 <?php
 
 class HomeController extends Hook\CMS\Controller {
+    protected $layout = 'main';
 
     public function index() {
         if (Request::isPost()) {
@@ -14,7 +15,7 @@ class HomeController extends Hook\CMS\Controller {
         $items = App::collection('items');
         $this->render('index', array(
             'item' => $items->first(),
-            'items' => $items->paginate(),
+            'items' => $items->paginate()
         ));
     }
 

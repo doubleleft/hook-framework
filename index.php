@@ -47,6 +47,10 @@ if (!$app->request->headers->get('X-App-Id'))
     {
         $application = Hook\Model\App::create(array('name' => "Application"));
 
+        $hook_config = $application->keys[0]->toArray();
+        $hook_config['endpoint'] = 'http://' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'];
+        file_put_contents($app->config('paths')['root'] . '.hook-config', json_encode($hook_config));
+
         // Migrate application tables
         Hook\Database\AppContext::setKey($application->keys[0]);
         Hook\Database\AppContext::migrate();
@@ -63,15 +67,14 @@ if (!$app->request->headers->get('X-App-Id'))
     $app->request->headers->set('X-App-Key', $app_key->key);
 }
 
-Hook\Http\Router::setInstance($app);
-Hook\Http\Router::setup($app);
-
 foreach($app->config('aliases') as $alias => $source) {
     class_alias($source, $alias);
 }
 
-$app->config("templates.path", $app->config('paths')['root'] . "views");
-$app->config("templates.helpers_path", __DIR__ . '/helpers');
+Router::setup($app);
+
+$app->config("templates.path", $app->config('paths')['root'] . "app/views");
+$app->config("templates.helpers_path", __DIR__ . '/app/helpers');
 $app->config("view", new Hook\Platform\View());
 require 'routes.php';
 $app->run();

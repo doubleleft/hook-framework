@@ -14,7 +14,7 @@ return array(
     'host'     => '127.0.0.1',
     'username' => 'root',
     'password' => '',
-    'database' => 'dlapi',
+    'database' => 'hook_platform',
     'collation' => 'utf8_general_ci',
     'charset' => 'utf8'
 

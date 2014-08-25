@@ -1,3 +1,9 @@
+CMS:
+- custom widgets
+- fill page blocks with widget contents
+- collection pages
+
+Backend:
 - back-end pagination support
 - write handy helpers
 

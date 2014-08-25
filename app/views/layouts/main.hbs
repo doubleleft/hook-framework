@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Home</title>
+    <meta name="keywords" content="{{ page.keywords }}" />
+    <meta name="description" content="{{ page.description }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  {{> cms/panel }}
+
+  <header>
+    <h1>Main page</h1>
+  </header>
+
+  <div class="wrapper clearfix">
+    {{{ yield }}}
+  </div>
+
+  <footer>footer...</footer>
+
+</body>
+</html>

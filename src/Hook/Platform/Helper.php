@@ -2,9 +2,9 @@
 
 class Helper {
 
-    public static function count($args) {
-        return count($args[0]);
-    }
+    //
+    // String helpers
+    //
 
     public static function lowercase($args) {
         return strtolower($string[0]);
@@ -29,6 +29,30 @@ class Helper {
     public static function camel_case($args) {
         return camel_case($args[0]);
     }
+
+    //
+    // URL helpers
+    //
+
+    public static function link_to($args, $attributes) {
+        $tag_attributes = "";
+        foreach ($attributes as $key => $value) {
+            $tag_attributes .= ' ' . $key . '="' . $value . '"';
+        }
+        return array('<a href="/'.$args[0].'"' . $tag_attributes . '>' . $args[1] . '</a>', 'raw');
+    }
+
+    //
+    // Integer helpers
+    //
+
+    public static function count($args) {
+        return count($args[0]);
+    }
+
+    //
+    // Miscelaneous helpers
+    //
 
     public static function paginate($args, $named) {
         $collection = $args[0];

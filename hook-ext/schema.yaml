@@ -1,0 +1,23 @@
+#
+# CMS Pages
+#
+cms_pages:
+  lock_attributes: true
+
+  attributes:
+    - name: name
+    - name: slug
+    - name: layout
+
+  relationships:
+    has_many: cms_page_widgets
+
+#
+# CMS Page Widgets
+#
+cms_page_widgets:
+  attributes:
+    - name: klass
+
+  relationships:
+    belongs_to: cms_pages
