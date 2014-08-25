@@ -1,5 +1,6 @@
 <?php namespace Hook\Platform;
 
+use Hook\Http\Router;
 use Hook\Exceptions\NotFoundException;
 
 use LightnCandy;
@@ -7,10 +8,19 @@ use LCRun3;
 
 class View extends \Slim\View
 {
-    public $parserDirectory = null;
-    public $options = array();
+    /**
+     * helpers
+     *
+     * @var \Slim\Helper\Set
+     */
+    public $helpers;
+
     protected $extensions = array('.html', '.mustache', '.hbs', '.handlebars');
-    private $engine = null;
+
+    public function __construct() {
+        parent::__construct();
+        $this->helpers = new \Slim\Helper\Set($this->getDefaultHelpers());
+    }
 
     public function render($name, $data = null)
     {
@@ -21,7 +31,7 @@ class View extends \Slim\View
                 LightnCandy::FLAG_HANDLEBARS,
             'basedir' => $this->getTemplatesDirectory(),
             'fileext' => $this->extensions,
-            'helpers' => $this->getHelpers()
+            'helpers' => $this->helpers->all()
         ));
 
         $renderer = LightnCandy::prepare($php);
@@ -39,21 +49,24 @@ class View extends \Slim\View
         throw new NotFoundException("Template not found.");
     }
 
-    protected function getHelpers() {
-        $app = \Slim\Slim::getInstance();
-
+    protected function getDefaultHelpers() {
         $helpers = array(
             // string helpers
             'str_plural' => 'Hook\\Platform\\Helper::str_plural',
             'str_singular' => 'Hook\\Platform\\Helper::str_singular',
             'uppercase' => 'Hook\\Platform\\Helper::uppercase',
             'lowercase' => 'Hook\\Platform\\Helper::lowercase',
+            'camel_case' => 'Hook\\Platform\\Helper::camel_case',
+            'snake_case' => 'Hook\\Platform\\Helper::snake_case',
 
             // integer helpers
-            'count' => 'Hook\\Platform\\Helper::count'
+            'count' => 'Hook\\Platform\\Helper::count',
+
+            // miscelaneous
+            'paginate' => 'Hook\\Platform\\Helper::paginate'
         );
 
-        $helper_files = glob($app->config('templates.helpers_path') . '/*');
+        $helper_files = glob(Router::config('templates.helpers_path') . '/*');
         foreach($helper_files as $helper) {
             $helpers = array_merge($helpers, require($helper));
         }

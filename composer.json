@@ -10,7 +10,8 @@
   "autoload": {
     "classmap": ["controllers"],
     "psr-0": {
-      "Hook\\Platform": "src"
+      "Hook\\Platform": "src",
+      "Hook\\CMS": "src"
     }
   },
   "repositories": [{
@@ -23,8 +24,6 @@
     "zordius/lightncandy": "dev-master"
   },
   "require-dev": {
-    "composer/composer": "dev-master",
-    "mockery/mockery": "0.8.0",
     "phpunit/phpunit": "3.7.*"
   },
   "scripts": {

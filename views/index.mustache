@@ -11,13 +11,15 @@
 
     <h1>{{ my_helper item.name }}</h1>
 
+    {{ block "identifier" }}
+
     <ul>
       {{#items}}
         {{> partial/item}}
       {{/items}}
     </ul>
 
-    {{{  items.links  }}}
+    {{{ paginate items }}}
 
     <form action="" method="post" accept-charset="utf-8">
       <p><input type="text" name="name" value="" id="name"></p>

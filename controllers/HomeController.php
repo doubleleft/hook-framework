@@ -1,20 +1,18 @@
 <?php
 
-class HomeController extends Hook\Platform\Controller {
-
-    public function __construct() { }
+class HomeController extends Hook\CMS\Controller {
 
     public function index() {
         if (Request::isPost()) {
             var_dump(Input::get());
         }
 
-        Hook\Model\App::collection('items')->create(array(
+        App::collection('items')->create(array(
             'name' => "Item " . rand()
         ));
 
-        $items = Hook\Model\App::collection('items');
-        $this->view('index', array(
+        $items = App::collection('items');
+        $this->render('index', array(
             'item' => $items->first(),
             'items' => $items->paginate(),
         ));

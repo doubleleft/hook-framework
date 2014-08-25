@@ -22,4 +22,22 @@ class Helper {
         return str_plural($args[0]);
     }
 
+    public static function snake_case($args) {
+        return snake_case($args[0]);
+    }
+
+    public static function camel_case($args) {
+        return camel_case($args[0]);
+    }
+
+    public static function paginate($args, $named) {
+        $collection = $args[0];
+
+        if (!method_exists($collection, 'links')) {
+            return "paginate: must have 'links' method.";
+        }
+
+        return $args[0]->links();
+    }
+
 }

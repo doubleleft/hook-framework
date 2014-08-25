@@ -10,8 +10,22 @@ if (isset($_SERVER['SERVER_SOFTWARE']) && preg_match('/Development Server/', $_S
 }
 
 require __DIR__ . '/vendor/autoload.php';
-$app = require __DIR__ . '/vendor/doubleleft/hook/src/Hook.php';
+require __DIR__ . '/vendor/doubleleft/hook/src/bootstrap/helpers.php';
 
+$config = require(__DIR__ . '/config/preferences.php');
+date_default_timezone_set($config['timezone']);
+
+if ($config['debug']) {
+    ini_set('display_errors', 1);
+    error_reporting(E_ALL);
+}
+
+$config['log.enabled'] = $config['debug'];
+
+// Merge settings with security config
+$config = array_merge($config, require(__DIR__ . '/config/security.php'));
+
+$app = new \Slim\Slim($config);
 $app->config('database', require(__DIR__ . '/config/database.php'));
 $app->config('paths', require(__DIR__ . '/config/paths.php'));
 
@@ -52,8 +66,9 @@ if (!$app->request->headers->get('X-App-Id'))
 Hook\Http\Router::setInstance($app);
 Hook\Http\Router::setup($app);
 
-class_alias('Hook\\Http\\Input', 'Input');
-class_alias('Hook\\Http\\Request', 'Request');
+foreach($app->config('aliases') as $alias => $source) {
+    class_alias($source, $alias);
+}
 
 $app->config("templates.path", $app->config('paths')['root'] . "views");
 $app->config("templates.helpers_path", __DIR__ . '/helpers');
