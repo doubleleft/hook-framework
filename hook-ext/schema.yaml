@@ -6,8 +6,22 @@ cms_pages:
 
   attributes:
     - name: name
+      type: string
     - name: slug
+      type: string
     - name: layout
+      type: string
+    - name: version
+      type: integer
+    - name: published
+      type: boolean
+      default: true
+
+    # SEO
+    - name: keywords
+      type: string
+    - name: description
+      type: string
 
   relationships:
     has_many: cms_page_widgets
@@ -18,6 +32,10 @@ cms_pages:
 cms_page_widgets:
   attributes:
     - name: klass
+      type: string
+    - name: published
+      type: boolean
+      default: true
 
   relationships:
     belongs_to: cms_pages

@@ -32,28 +32,19 @@ class PageController extends Controller
     public function show()
     {
         $page = static::$page;
+
         if (!$page) {
             return $this->show404();
         }
 
-        $this->setLayout($page->layout);
-
-        App::collection('items')->create(array(
-            'name' => "Item " . rand()
-        ));
-
-        $items = App::collection('items');
-        $this->render('index', array(
-            'item' => $items->first(),
-            'items' => $items->paginate()
-        ));
-
+        $this->render("layouts/{$page->layout}");
     }
 
     public function show404()
     {
         if (Request::isPost()) {
-            App::collection(self::PAGES_COLLECTION)->create(Input::get('page'));
+            $page = App::collection(self::PAGES_COLLECTION)->create(Input::get('page'));
+            Request::redirect($page->slug);
         }
 
         $layouts = array();
