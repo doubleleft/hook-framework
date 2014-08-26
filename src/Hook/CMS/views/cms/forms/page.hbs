@@ -1,0 +1,6 @@
+{{#form_for "page" method="post" data-something="hey" }}
+  {{ input "name" placeholder="Name" }}
+  {{ input "slug" placeholder="Slug" value=request_path }}
+  {{ input "layout" options=layouts }}
+  {{ input type="submit" value="Criar" }}
+{{/form_for}}

@@ -7,7 +7,7 @@ Features
 ---
 
 - [Hook](https://github.com/doubleleft/hook) built-in
-- [Mustache](http://mustache.github.io/) templates
+- [Mustache/Handlebars](https://github.com/zordius/lightncandy) templating
 
 Development server
 ---

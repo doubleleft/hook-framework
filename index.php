@@ -10,7 +10,8 @@ if (isset($_SERVER['SERVER_SOFTWARE']) && preg_match('/Development Server/', $_S
 }
 
 require __DIR__ . '/vendor/autoload.php';
-require __DIR__ . '/vendor/doubleleft/hook/src/bootstrap/helpers.php';
+require __DIR__ . '/vendor/doubleleft/hook/src/bootstrap/helpers.php'; // hook helpers
+require __DIR__ . '/src/Hook/helpers.php'; // hook-platform helpers
 
 $config = require(__DIR__ . '/config/preferences.php');
 date_default_timezone_set($config['timezone']);

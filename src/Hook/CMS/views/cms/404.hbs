@@ -1,0 +1,7 @@
+{{#is_admin}}
+  <h1>Page '{{ request_path }}' not found.</h1>
+  {{> cms/forms/page}}
+
+{{ else }}
+  {{> 404 }}
+{{/is_admin}}

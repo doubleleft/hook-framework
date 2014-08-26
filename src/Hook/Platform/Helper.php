@@ -1,5 +1,7 @@
 <?php namespace Hook\Platform;
 
+use Hook\Http\Router;
+
 class Helper {
 
     //
@@ -35,11 +37,44 @@ class Helper {
     //
 
     public static function link_to($args, $attributes) {
-        $tag_attributes = "";
-        foreach ($attributes as $key => $value) {
-            $tag_attributes .= ' ' . $key . '="' . $value . '"';
+        return array('<a href="/'.$args[0].'"' . html_attributes($attributes) . '>' . $args[1] . '</a>', 'raw');
+    }
+
+    //
+    // Form helpers
+    //
+
+    public static function input($args, $attributes) {
+        if (!isset($attributes['name']) && isset($args[0])) {
+            // TODO: analyse context recursively
+            if (Router::getInstance()->view->context->count() > 0) {
+                $attributes['name'] = Router::getInstance()->view->context->top() . '['.$args[0].']';
+            } else {
+                $attributes['name'] = $args[0];
+            }
         }
-        return array('<a href="/'.$args[0].'"' . $tag_attributes . '>' . $args[1] . '</a>', 'raw');
+
+        // select / options tags
+        $options = array_remove($attributes, 'options');
+        $selected_option = array_remove($attributes, 'selected');
+
+        if ($options) {
+            $html_options = '';
+            foreach($options as $key => $value) {
+                $key = isset($value['_id']) ? $value['_id'] : $key;
+                $value = isset($value['name']) ? $value['name'] : $value;
+                $is_selected = ($selected_option == $value) ? ' selected="selected"' : '';
+                $html_options .= '<option value="' . $key . '"' . $is_selected . '>' . $value . '</option>';
+            }
+            return array('<select' . html_attributes($attributes) . '>'.$html_options.'</select>', 'raw');
+        }
+
+        // use 'text' as default input type
+        if (!isset($attributes['type'])) {
+            $attributes['type'] = 'text';
+        }
+
+        return array('<input' . html_attributes($attributes) . ' />', 'raw');
     }
 
     //

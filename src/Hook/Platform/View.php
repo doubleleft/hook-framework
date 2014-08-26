@@ -6,6 +6,8 @@ use Hook\Exceptions\NotFoundException;
 use LightnCandy;
 use LCRun3;
 
+use SplStack;
+
 class View extends \Slim\View
 {
     /**
@@ -15,12 +17,29 @@ class View extends \Slim\View
      */
     public $helpers;
 
+    /**
+     * block_helpers
+     *
+     * @var \Slim\Helper\Set
+     */
+    public $block_helpers;
+
+    /**
+     * context
+     *
+     * @var SplStack
+     */
+    public $context;
+
     protected $extensions = array('.mustache', '.hbs', '.handlebars', '.html');
     protected $directories = array();
 
     public function __construct() {
         parent::__construct();
-        $this->helpers = new \Slim\Helper\Set($this->getDefaultHelpers());
+
+        $this->context = new SplStack();
+        $this->helpers = new \Slim\Helper\Set($this->getHelpers());
+        $this->block_helpers = new \Slim\Helper\Set($this->getBlockHelpers());
     }
 
     public function setTemplatesDirectory($directory) {
@@ -36,7 +55,8 @@ class View extends \Slim\View
                 LightnCandy::FLAG_HANDLEBARS,
             'basedir' => $this->directories,
             'fileext' => $this->extensions,
-            'helpers' => $this->helpers->all()
+            'helpers' => $this->helpers->all(),
+            'hbhelpers' => $this->block_helpers->all()
         ));
 
         $renderer = LightnCandy::prepare($php);
@@ -55,7 +75,7 @@ class View extends \Slim\View
         throw new NotFoundException("Template not found.");
     }
 
-    protected function getDefaultHelpers() {
+    protected function getHelpers() {
         $helpers = array(
             // string helpers
             'str_plural' => 'Hook\\Platform\\Helper::str_plural',
@@ -67,6 +87,10 @@ class View extends \Slim\View
 
             // url helpers
             'link_to' => 'Hook\\Platform\\Helper::link_to',
+
+            // form helpers
+            'input' => 'Hook\\Platform\\Helper::input',
+            'input' => 'Hook\\Platform\\Helper::input',
 
             // integer helpers
             'count' => 'Hook\\Platform\\Helper::count',
@@ -81,6 +105,12 @@ class View extends \Slim\View
         }
 
         return $helpers;
+    }
+
+    protected function getBlockHelpers() {
+        return array(
+            'form_for' => 'Hook\\Platform\\BlockHelper::form_for'
+        );
     }
 
 }
