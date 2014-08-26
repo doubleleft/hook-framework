@@ -8,6 +8,8 @@ use Hook\Http\Router;
 use Hook\Http\Cookie;
 use Hook\Http\Request;
 
+use Hook\Database\Schema\Builder as SchemaBuilder;
+
 class PageController extends Controller
 {
     const PAGES_COLLECTION = 'cms_pages';
@@ -15,14 +17,16 @@ class PageController extends Controller
 
     public static function mounted()
     {
-        // Router::hook('slim.before.router', function() {
-        //     $page = App::collection(self::PAGES_COLLECTION)->where('slug', Request::path())->first();
-        //     if (!$page) {
-        //         $page = App::collection(self::PAGES_COLLECTION)->where('identifier', '404')->first();
-        //     }
-        //     Router::get($page->slug, 'Hook\\CMS\\Controllers\\PageController:show');
-        //     PageController::$page = $page;
-        // });
+        Router::hook('slim.before.router', function() {
+            if (SchemaBuilder::hasTable(self::PAGES_COLLECTION)) {
+                $page = App::collection(self::PAGES_COLLECTION)->where('slug', Request::path())->first();
+                if (!$page) {
+                    $page = App::collection(self::PAGES_COLLECTION)->where('name', '404')->first();
+                }
+                Router::get($page->slug, 'Hook\\CMS\\Controllers\\PageController:show');
+                PageController::$page = $page;
+            }
+        });
     }
 
     public function show()
