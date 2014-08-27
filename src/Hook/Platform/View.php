@@ -90,7 +90,7 @@ class View extends \Slim\View
 
             // form helpers
             'input' => 'Hook\\Platform\\Helper::input',
-            'input' => 'Hook\\Platform\\Helper::input',
+            'select' => 'Hook\\Platform\\Helper::select',
 
             // integer helpers
             'count' => 'Hook\\Platform\\Helper::count',
@@ -109,6 +109,7 @@ class View extends \Slim\View
 
     protected function getBlockHelpers() {
         return array(
+            'form' => 'Hook\\Platform\\BlockHelper::form',
             'form_for' => 'Hook\\Platform\\BlockHelper::form_for'
         );
     }

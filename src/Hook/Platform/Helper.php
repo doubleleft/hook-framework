@@ -54,19 +54,8 @@ class Helper {
             }
         }
 
-        // select / options tags
-        $options = array_remove($attributes, 'options');
-        $selected_option = array_remove($attributes, 'selected');
-
-        if ($options) {
-            $html_options = '';
-            foreach($options as $key => $value) {
-                $key = isset($value['_id']) ? $value['_id'] : $key;
-                $value = isset($value['name']) ? $value['name'] : $value;
-                $is_selected = ($selected_option == $value) ? ' selected="selected"' : '';
-                $html_options .= '<option value="' . $key . '"' . $is_selected . '>' . $value . '</option>';
-            }
-            return array('<select' . html_attributes($attributes) . '>'.$html_options.'</select>', 'raw');
+        if (isset($attributes['options'])) {
+            return \Hook\Platform\Helper::select($args, $attributes);
         }
 
         // use 'text' as default input type
@@ -75,6 +64,21 @@ class Helper {
         }
 
         return array('<input' . html_attributes($attributes) . ' />', 'raw');
+    }
+
+    public static function select($args, $attributes) {
+        $options = array_remove($attributes, 'options');
+        $selected_option = array_remove($attributes, 'selected');
+
+        $html_options = '';
+        foreach($options as $key => $value) {
+            $key = isset($value['_id']) ? $value['_id'] : $key;
+            $value = isset($value['name']) ? $value['name'] : $value;
+            $is_selected = ($selected_option == $value) ? ' selected="selected"' : '';
+            $html_options .= '<option value="' . $key . '"' . $is_selected . '>' . $value . '</option>';
+        }
+
+        return array('<select' . html_attributes($attributes) . '>'.$html_options.'</select>', 'raw');
     }
 
     //
