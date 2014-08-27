@@ -1,7 +1,7 @@
 hook-platform
 =============
 
-Built on top of [hook](https://github.com/doubleleft/hook).
+High productivity framework. Built on top of [hook](https://github.com/doubleleft/hook).
 
 Features
 ---
@@ -17,7 +17,7 @@ $ hook server
 ...
 PHP 5.4.24 Development Server started at Mon Aug 11 19:49:27 2014
 Listening on http://localhost:4665
-Document root is /Users/endel/Projects/hook-platform
+Document root is /Users/endel/Projects/hook-platform/public
 Press Ctrl-C to quit.
 ```
 

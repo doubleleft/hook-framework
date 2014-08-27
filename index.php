@@ -1,10 +1,12 @@
 <?php
 // Is running on development server?
-// php -S localhost index.php
+// php -S localhost:4665 -t public
 if (isset($_SERVER['SERVER_SOFTWARE']) && preg_match('/Development Server/', $_SERVER['SERVER_SOFTWARE'])) {
     // allow to serve static files
-    $path = __DIR__ . $_SERVER["REQUEST_URI"];
-    if (file_exists($path) && is_file($path)) {
+    $path = getcwd() . $_SERVER["REQUEST_URI"];
+    $extension = pathinfo($path, PATHINFO_EXTENSION);
+
+    if ($extension !== 'php' && file_exists($path) && is_file($path)) {
         return false;
     }
 }

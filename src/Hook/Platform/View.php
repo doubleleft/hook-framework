@@ -30,7 +30,7 @@ class View extends \Slim\View
      * @var SplStack
      */
     public $context;
-    public $yield_blocks = array();
+    public $yield_blocks;
 
     protected $extensions = array('.hbs', '.handlebars', '.mustache', '.html');
     protected $directories = array();
@@ -39,6 +39,7 @@ class View extends \Slim\View
         parent::__construct();
 
         $this->context = new SplStack();
+        $this->yield_blocks = array();
         $this->helpers = new \Slim\Helper\Set($this->getHelpers());
         $this->block_helpers = new \Slim\Helper\Set($this->getBlockHelpers());
     }
@@ -115,6 +116,9 @@ class View extends \Slim\View
         return array(
             // core helpers
             'content_for' => 'Hook\\Platform\\BlockHelper::content_for',
+
+            // url helpers
+            'link_to' => 'Hook\\Platform\\BlockHelper::link_to',
 
             // form helpers
             'form' => 'Hook\\Platform\\BlockHelper::form',

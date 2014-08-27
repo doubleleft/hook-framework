@@ -15,6 +15,13 @@ class BlockHelper {
     }
 
     //
+    // URL helpers
+    //
+    public static function link_to($context, $options) {
+        return \Hook\Platform\Helper::link_to(array($context, PHP_EOL.$options['fn']()), $options['hash']);
+    }
+
+    //
     // Form helpers
     //
 

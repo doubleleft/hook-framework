@@ -69,7 +69,8 @@ class Helper {
 
         // use 'text' as default input type
         if (!isset($attributes['type'])) {
-            $attributes['type'] = 'text';
+            $is_type_as_name = in_array($attributes['name'], array('email', 'password', 'date'));
+            $attributes['type'] = $is_type_as_name ? $attributes['name'] : 'text';
         }
 
         return array('<input' . html_attributes($attributes) . ' />', 'raw');
