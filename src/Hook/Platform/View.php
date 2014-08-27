@@ -31,7 +31,7 @@ class View extends \Slim\View
      */
     public $context;
 
-    protected $extensions = array('.mustache', '.hbs', '.handlebars', '.html');
+    protected $extensions = array('.hbs', '.handlebars', '.mustache', '.html');
     protected $directories = array();
 
     public function __construct() {
