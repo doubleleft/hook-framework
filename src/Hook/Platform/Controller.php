@@ -7,7 +7,7 @@ class Controller extends HookController
 {
     protected $layout;
 
-    public function render($template, $data = array())
+    protected function render($template, $data = array())
     {
         if (!$this->layout) {
             return parent::render($template, $data);
@@ -18,7 +18,7 @@ class Controller extends HookController
         }
     }
 
-    public function setLayout($name) {
+    protected function setLayout($name) {
         $this->layout = $name;
     }
 
