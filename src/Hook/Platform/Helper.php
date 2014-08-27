@@ -5,6 +5,15 @@ use Hook\Http\Router;
 class Helper {
 
     //
+    // Core helpers
+    //
+
+    public static function yield($args) {
+        $content = isset($args[0]) ? $args[0] : '__yield__';
+        return array(Router::getInstance()->view->yield_blocks[$content], 'raw');
+    }
+
+    //
     // String helpers
     //
 

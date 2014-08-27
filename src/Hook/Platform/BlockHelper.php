@@ -5,6 +5,19 @@ use Hook\Platform\Helper;
 
 class BlockHelper {
 
+    //
+    // Core helpers
+    //
+
+    public static function content_for($context, $options) {
+        Router::getInstance()->view->yield_blocks[$context] = $options['fn']();
+        return false;
+    }
+
+    //
+    // Form helpers
+    //
+
     public static function form() {
         $args = func_get_args();
         $options = array_pop($args);

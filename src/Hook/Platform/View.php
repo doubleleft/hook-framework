@@ -30,6 +30,7 @@ class View extends \Slim\View
      * @var SplStack
      */
     public $context;
+    public $yield_blocks = array();
 
     protected $extensions = array('.hbs', '.handlebars', '.mustache', '.html');
     protected $directories = array();
@@ -77,6 +78,9 @@ class View extends \Slim\View
 
     protected function getHelpers() {
         $helpers = array(
+            // core helpers
+            'yield' => 'Hook\\Platform\\Helper::yield',
+
             // string helpers
             'str_plural' => 'Hook\\Platform\\Helper::str_plural',
             'str_singular' => 'Hook\\Platform\\Helper::str_singular',
@@ -109,6 +113,10 @@ class View extends \Slim\View
 
     protected function getBlockHelpers() {
         return array(
+            // core helpers
+            'content_for' => 'Hook\\Platform\\BlockHelper::content_for',
+
+            // form helpers
             'form' => 'Hook\\Platform\\BlockHelper::form',
             'form_for' => 'Hook\\Platform\\BlockHelper::form_for'
         );

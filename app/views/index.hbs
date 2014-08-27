@@ -1,6 +1,8 @@
-<h2>{{ my_helper item.name }} - {{ item.name}}</h2>
+{{#content_for "header"}}
+  <p>What</p>
+{{/content_for}}
 
-{{ block "contents" }}
+<h2>{{ my_helper item.name }} - {{ item.name}}</h2>
 
 <ul>
   {{#items}}

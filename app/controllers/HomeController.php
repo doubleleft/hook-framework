@@ -1,6 +1,6 @@
 <?php
 
-class HomeController extends Hook\CMS\Controller {
+class HomeController extends Hook\Platform\Controller {
     protected $layout = 'main';
 
     public function index() {

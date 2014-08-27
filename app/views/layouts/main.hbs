@@ -8,14 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  {{> cms/panel }}
-
   <header>
     <h1>Main page</h1>
+    {{ yield "header" }}
   </header>
 
   <div class="wrapper clearfix">
-    {{{ yield }}}
+    {{ yield }}
   </div>
 
   <footer>footer...</footer>

@@ -13,9 +13,8 @@ class Controller extends HookController
             return parent::render($template, $data);
 
         } else {
-            return parent::render('layouts/' . $this->layout, array(
-                'yield' => $this->view->render($template, $data)
-            ));
+            $this->view->yield_blocks['__yield__'] = $this->view->render($template, $data);
+            return parent::render('layouts/' . $this->layout);
         }
     }
 
