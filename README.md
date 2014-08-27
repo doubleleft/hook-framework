@@ -3,6 +3,8 @@ hook-platform
 
 High productivity framework. Built on top of [hook](https://github.com/doubleleft/hook).
 
+Administrator interface: [SB Admin 2](http://startbootstrap.com/template-overviews/sb-admin-2/)
+
 Features
 ---
 
