@@ -1,6 +1,7 @@
 <?php namespace Hook\Platform;
 
 use Hook\Http\Router;
+use Hook\Http\Request;
 
 class Helper {
 
@@ -47,6 +48,17 @@ class Helper {
 
     public static function link_to($args, $attributes) {
         return array('<a href="/'.$args[0].'"' . html_attributes($attributes) . '>' . $args[1] . '</a>', 'raw');
+    }
+
+    public static function stylesheet($args, $attributes) {
+        $url = preg_replace('/index\.php\//', '', str_finish(Request::getRootUri(), '/')) . $args[0];
+        $media = (isset($attributes['media'])) ? $attributes['media'] : 'screen';
+        return array('<link href="' . $url . '" media="' . $media . '" rel="stylesheet" />', 'raw');
+    }
+
+    public static function javascript($args, $attributes) {
+        $url = preg_replace('/index\.php\//', '', str_finish(Request::getRootUri(), '/')) . $args[0]; // Request::getRootUri()
+        return array('<script src="' . $url . '"></script>', 'raw');
     }
 
     //
@@ -110,7 +122,7 @@ class Helper {
             return "paginate: must have 'links' method.";
         }
 
-        return $args[0]->links();
+        return array($args[0]->links(), 'raw');
     }
 
 }

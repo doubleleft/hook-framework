@@ -92,6 +92,8 @@ class View extends \Slim\View
 
             // url helpers
             'link_to' => 'Hook\\Platform\\Helper::link_to',
+            'stylesheet' => 'Hook\\Platform\\Helper::stylesheet',
+            'javascript' => 'Hook\\Platform\\Helper::javascript',
 
             // form helpers
             'input' => 'Hook\\Platform\\Helper::input',
