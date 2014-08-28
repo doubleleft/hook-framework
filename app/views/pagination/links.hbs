@@ -1,12 +1,16 @@
 {{#if links}}
-  <ul>
+  <ul class="pagination">
     {{#first}}
       <li class="first"><a href="?page=1">First</a></li>
     {{/first}}
 
-    {{#links}}
-      <li class="{{#current}}current{{/current}}"><a href="?page={{ i }}">{{ label }}</a></li>
-    {{/links}}
+    {{#each links}}
+      {{#if inside_window}}
+        <li class="{{#current}}current{{/current}}"><a href="?page={{ i }}">{{ label }}</a></li>
+      {{ else }}
+        <li>...</li>
+      {{/if}}
+    {{/each}}
 
     {{#last}}
       <li class="last"><a href="?page={{i}}">Last</a></li>

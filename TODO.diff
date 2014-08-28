@@ -1,10 +1,9 @@
-CMS:
-- custom widgets
-- fill page blocks with widget contents
-- collection pages
+Administrator:
+- administrator panel
+- yaml file for each editable collection
+- custom actions on collection list
+- export data as CSV from collection list
 
-Backend:
-- back-end pagination support
-- write handy helpers
-
++ write handy helpers
 + expose aliases such as Input / Request / Server
++ back-end pagination support

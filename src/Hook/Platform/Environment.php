@@ -9,6 +9,13 @@ class Environment
     protected $paginator;
     protected $currentPage;
 
+    /**
+     * window - default pagination window
+     *
+     * @var int
+     */
+    protected $window = 4;
+
     public function getCurrentPage()
     {
         $page = (int) $this->currentPage ?: Input::get('page', 1);
@@ -27,24 +34,34 @@ class Environment
         return $this->paginator->setupPaginationContext();
     }
 
+    public function setPaginationWindow($window) {
+        $this->window = $window;
+    }
+
     public function getPaginationView($paginator, $view)
     {
-        $has_first = true;
-        $has_last = true;
         $links = array();
 
+        $current_page = $paginator->getCurrentPage();
+        $inside_window = true;
+
         for($i=1; $i<$paginator->getLastPage(); $i++) {
-            array_push($links, array(
-                'i' => $i,
-                'label' => $i,
-                'current' => $i == $paginator->getCurrentPage()
-            ));
+            $next_inside_window = (abs($current_page - $i) <= $this->window);
+            if ($inside_window || $next_inside_window) {
+                array_push($links, array(
+                    'i' => $i,
+                    'label' => $i,
+                    'current' => ($i == $current_page),
+                    'inside_window' => $next_inside_window
+                ));
+            }
+            $inside_window = $next_inside_window;
         }
 
         $instance = Router::getInstance()->view;
         $instance->setData(array(
-            'first' => current($links),
-            'last' => end($links),
+            'first' => true,
+            'last' => array('i' => $paginator->getLastPage()),
             'links' => $links
         ));
         return $instance->fetch("pagination/links");
