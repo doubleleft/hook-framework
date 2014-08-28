@@ -36,5 +36,8 @@ return array(
         'Input' => 'Hook\\Http\\Input',
         'Request' => 'Hook\\Http\\Request',
         'Router' => 'Hook\\Http\\Router',
+
+        // Utils
+        'Mail' => 'Hook\\Mailer\\Mail'
     )
 );
