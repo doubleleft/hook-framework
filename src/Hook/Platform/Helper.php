@@ -122,8 +122,10 @@ class Helper {
             return "paginate: must have 'links' method.";
         }
 
-        $window = array_remove($named, 'window') ?: 4;
-        $collection->getEnvironment()->setPaginationWindow($window);
+        // pagination window
+        if (isset($named['window'])) {
+            $collection->getEnvironment()->setPaginationWindow($named['window']);
+        }
 
         return array($args[0]->links(), 'raw');
     }
