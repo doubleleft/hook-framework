@@ -11,7 +11,8 @@ class Helper {
 
     public static function yield($args) {
         $content = isset($args[0]) ? $args[0] : '__yield__';
-        return array(Router::getInstance()->view->yield_blocks[$content], 'raw');
+        $yield_blocks = Router::getInstance()->view->yield_blocks;
+        return array(isset($yield_blocks[$content]) ? $yield_blocks[$content] : "", 'raw');
     }
 
     //
@@ -47,7 +48,8 @@ class Helper {
     //
 
     public static function link_to($args, $attributes) {
-        return array('<a href="/'.$args[0].'"' . html_attributes($attributes) . '>' . $args[1] . '</a>', 'raw');
+        $text = (isset($args[1])) ? $args[1] : $args[0];
+        return array('<a href="/'.$args[0].'"' . html_attributes($attributes) . '>' . $text . '</a>', 'raw');
     }
 
     public static function stylesheet($args, $attributes) {

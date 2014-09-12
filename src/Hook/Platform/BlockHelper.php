@@ -17,8 +17,15 @@ class BlockHelper {
     //
     // URL helpers
     //
-    public static function link_to($context, $options) {
-        return \Hook\Platform\Helper::link_to(array($context, PHP_EOL.$options['fn']()), $options['hash']);
+    public static function link_to() {
+        $args = func_get_args();
+        $options = array_pop($args);
+
+        if (isset($options['fn'])) {
+            array_push($args, PHP_EOL.$options['fn']());
+        }
+
+        return \Hook\Platform\Helper::link_to($args, $options['hash']);
     }
 
     //

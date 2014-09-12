@@ -2,7 +2,22 @@
   <p>What</p>
 {{/content_for}}
 
+{{#content_for "menu"}}
+<ul>
+  <li> Item 1 </li>
+  <li> Item 2 </li>
+  <li> Item 3 </li>
+  <li> Item 4 </li>
+</ul>
+{{/content_for}}
+
 <h2>{{ my_helper item.name }} - {{ item.name}}</h2>
+
+{{#link_to "what" target="_blank"}}
+  Something
+{{/link_to}}
+
+{{link_to "what" target="_blank" }}
 
 <ul>
   {{#items}}

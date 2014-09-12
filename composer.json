@@ -29,6 +29,8 @@
   },
   "scripts": {
     "post-install-cmd": [
+      "chmod 777 public/storage",
+      "chmod 777 shared",
       "Hook\\Platform\\Installer::assets"
     ]
   },
