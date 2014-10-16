@@ -21,7 +21,7 @@
   }],
   "require": {
     "php": ">=5.3.0",
-    "doubleleft/hook": "dev-dev",
+    "doubleleft/hook": "dev-master",
     "zordius/lightncandy": "dev-master"
   },
   "require-dev": {

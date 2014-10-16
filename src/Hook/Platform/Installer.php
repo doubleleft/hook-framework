@@ -7,7 +7,7 @@ class Installer
     const ASSETS_DIR = 'assets';
 
     public static function assets() {
-        echo "=> Installing package assets..." . PHP_EOL;
+        echo "=> Searching for package assets..." . PHP_EOL;
 
         // built-in assets
         static::copyPublicAssets(array_filter(static::searchFiles(__DIR__ . '/..'), function($file) {
@@ -27,7 +27,7 @@ class Installer
             preg_match('/\/'.self::ASSETS_DIR.'\/(.*)/', dirname($source_path), $matches);
             $dest_dir = (count($matches) == 2) ? $matches[1] : null;
             if ($dest_dir) {
-                $dest_dir = $paths['public'] . DIRECTORY_SEPARATOR . self::ASSETS_DIR . DIRECTORY_SEPARATOR . $dest_dir . DIRECTORY_SEPARATOR;
+                $dest_dir = $paths['root'] . 'public' . DIRECTORY_SEPARATOR . self::ASSETS_DIR . DIRECTORY_SEPARATOR . $dest_dir . DIRECTORY_SEPARATOR;
 
                 // create directory
                 if(!file_exists($dest_dir)) {

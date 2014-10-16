@@ -4,76 +4,8 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3ba4dba27f061b95d966c2aa8154bfd5",
+    "hash": "bc04b7a527bf5654b5826cc119d597c2",
     "packages": [
-        {
-            "name": "aws/aws-sdk-php",
-            "version": "2.5.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "dd8f78b8abde74245578dbfb930c29efff20f25a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/dd8f78b8abde74245578dbfb930c29efff20f25a",
-                "reference": "dd8f78b8abde74245578dbfb930c29efff20f25a",
-                "shasum": ""
-            },
-            "require": {
-                "guzzle/guzzle": ">=3.7.0,<3.9.0",
-                "php": ">=5.3.3"
-            },
-            "require-dev": {
-                "doctrine/cache": "~1.0",
-                "ext-openssl": "*",
-                "monolog/monolog": "1.4.*",
-                "phpunit/phpunit": "3.7.*",
-                "symfony/class-loader": "2.*",
-                "symfony/yaml": "2.*"
-            },
-            "suggest": {
-                "doctrine/cache": "Adds support for caching of credentials and responses",
-                "ext-apc": "Allows service description opcode caching, request and response caching, and credentials caching",
-                "ext-openssl": "Allows working with CloudFront private distributions and verifying received SNS messages",
-                "monolog/monolog": "Adds support for logging HTTP requests and responses",
-                "symfony/yaml": "Eases the ability to write manifests for creating jobs in AWS Import/Export"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.5.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Aws": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Amazon Web Services",
-                    "homepage": "http://aws.amazon.com"
-                }
-            ],
-            "description": "AWS SDK for PHP - Use Amazon Web Services in your PHP project",
-            "homepage": "http://aws.amazon.com/sdkforphp",
-            "keywords": [
-                "amazon",
-                "aws",
-                "cloud",
-                "dynamodb",
-                "ec2",
-                "glacier",
-                "s3",
-                "sdk"
-            ],
-            "time": "2014-03-20 20:01:49"
-        },
         {
             "name": "cboden/ratchet",
             "version": "v0.3.2",
@@ -129,12 +61,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/annotations.git",
-                "reference": "e93f3b718c421daddff58c4a4af1aee574472cd6"
+                "reference": "6a6bec0670bb6e71a263b08bc1b98ea242928633"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/annotations/zipball/e93f3b718c421daddff58c4a4af1aee574472cd6",
-                "reference": "e93f3b718c421daddff58c4a4af1aee574472cd6",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/6a6bec0670bb6e71a263b08bc1b98ea242928633",
+                "reference": "6a6bec0670bb6e71a263b08bc1b98ea242928633",
                 "shasum": ""
             },
             "require": {
@@ -189,7 +121,7 @@
                 "docblock",
                 "parser"
             ],
-            "time": "2014-07-27 16:33:24"
+            "time": "2014-09-25 16:45:30"
         },
         {
             "name": "doctrine/cache",
@@ -197,12 +129,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/cache.git",
-                "reference": "72121e68265cd8b37f9b69778308251f6c5133e4"
+                "reference": "f7a1d660c521461b835dc31af0f6c9836769e917"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/72121e68265cd8b37f9b69778308251f6c5133e4",
-                "reference": "72121e68265cd8b37f9b69778308251f6c5133e4",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/f7a1d660c521461b835dc31af0f6c9836769e917",
+                "reference": "f7a1d660c521461b835dc31af0f6c9836769e917",
                 "shasum": ""
             },
             "require": {
@@ -258,7 +190,7 @@
                 "cache",
                 "caching"
             ],
-            "time": "2014-08-05 12:51:19"
+            "time": "2014-09-29 13:28:56"
         },
         {
             "name": "doctrine/collections",
@@ -266,12 +198,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/collections.git",
-                "reference": "432240f56fbc9a811dbf1ff8a45c1a1047ba1c0a"
+                "reference": "8c5148e0ef8cee4afe86d45ba98f7b6d96e780d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/collections/zipball/432240f56fbc9a811dbf1ff8a45c1a1047ba1c0a",
-                "reference": "432240f56fbc9a811dbf1ff8a45c1a1047ba1c0a",
+                "url": "https://api.github.com/repos/doctrine/collections/zipball/8c5148e0ef8cee4afe86d45ba98f7b6d96e780d0",
+                "reference": "8c5148e0ef8cee4afe86d45ba98f7b6d96e780d0",
                 "shasum": ""
             },
             "require": {
@@ -324,20 +256,20 @@
                 "collections",
                 "iterator"
             ],
-            "time": "2014-07-29 20:07:28"
+            "time": "2014-09-24 12:11:27"
         },
         {
             "name": "doctrine/common",
-            "version": "2.4.x-dev",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/common.git",
-                "reference": "ae92d076442e27b6910dd86a1292a8867cf5cfe4"
+                "reference": "559a805125524b0bb6742638784c2979a5c5e607"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/common/zipball/ae92d076442e27b6910dd86a1292a8867cf5cfe4",
-                "reference": "ae92d076442e27b6910dd86a1292a8867cf5cfe4",
+                "url": "https://api.github.com/repos/doctrine/common/zipball/559a805125524b0bb6742638784c2979a5c5e607",
+                "reference": "559a805125524b0bb6742638784c2979a5c5e607",
                 "shasum": ""
             },
             "require": {
@@ -354,7 +286,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.4.x-dev"
+                    "dev-master": "2.5.x-dev"
                 }
             },
             "autoload": {
@@ -368,17 +300,6 @@
             ],
             "authors": [
                 {
-                    "name": "Jonathan Wage",
-                    "email": "jonwage@gmail.com",
-                    "homepage": "http://www.jwage.com/",
-                    "role": "Creator"
-                },
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com",
-                    "homepage": "http://www.instaclick.com"
-                },
-                {
                     "name": "Roman Borschel",
                     "email": "roman@code-factory.org"
                 },
@@ -387,10 +308,16 @@
                     "email": "kontakt@beberlei.de"
                 },
                 {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
                     "name": "Johannes Schmitt",
-                    "email": "schmittjoh@gmail.com",
-                    "homepage": "https://github.com/schmittjoh",
-                    "role": "Developer of wrapped JMSSerializerBundle"
+                    "email": "schmittjoh@gmail.com"
                 }
             ],
             "description": "Common Library for Doctrine projects",
@@ -402,7 +329,7 @@
                 "persistence",
                 "spl"
             ],
-            "time": "2014-05-21 19:29:23"
+            "time": "2014-07-27 17:39:50"
         },
         {
             "name": "doctrine/dbal",
@@ -410,20 +337,20 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "1c9c24a7e2295b71249ae2a719ce38861fccd551"
+                "reference": "09f1050836a282be5caa2754d38bdb5a946264cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/1c9c24a7e2295b71249ae2a719ce38861fccd551",
-                "reference": "1c9c24a7e2295b71249ae2a719ce38861fccd551",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/09f1050836a282be5caa2754d38bdb5a946264cf",
+                "reference": "09f1050836a282be5caa2754d38bdb5a946264cf",
                 "shasum": ""
             },
             "require": {
-                "doctrine/common": "2.4.*",
+                "doctrine/common": ">=2.4,<2.6-dev",
                 "php": ">=5.3.2"
             },
             "require-dev": {
-                "phpunit/phpunit": "4.0.*",
+                "phpunit/phpunit": "4.*",
                 "symfony/console": "2.*"
             },
             "suggest": {
@@ -473,7 +400,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2014-08-24 01:25:05"
+            "time": "2014-10-16 15:33:51"
         },
         {
             "name": "doctrine/inflector",
@@ -481,12 +408,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/inflector.git",
-                "reference": "64de2fe36d578c5d5f3807ac7984547bbba5f7c5"
+                "reference": "8a0b96e65d2399d6f95b75de11134843a2c61feb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/inflector/zipball/64de2fe36d578c5d5f3807ac7984547bbba5f7c5",
-                "reference": "64de2fe36d578c5d5f3807ac7984547bbba5f7c5",
+                "url": "https://api.github.com/repos/doctrine/inflector/zipball/8a0b96e65d2399d6f95b75de11134843a2c61feb",
+                "reference": "8a0b96e65d2399d6f95b75de11134843a2c61feb",
                 "shasum": ""
             },
             "require": {
@@ -512,17 +439,6 @@
             ],
             "authors": [
                 {
-                    "name": "Jonathan Wage",
-                    "email": "jonwage@gmail.com",
-                    "homepage": "http://www.jwage.com/",
-                    "role": "Creator"
-                },
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com",
-                    "homepage": "http://www.instaclick.com"
-                },
-                {
                     "name": "Roman Borschel",
                     "email": "roman@code-factory.org"
                 },
@@ -531,10 +447,16 @@
                     "email": "kontakt@beberlei.de"
                 },
                 {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
                     "name": "Johannes Schmitt",
-                    "email": "schmittjoh@gmail.com",
-                    "homepage": "https://github.com/schmittjoh",
-                    "role": "Developer of wrapped JMSSerializerBundle"
+                    "email": "schmittjoh@gmail.com"
                 }
             ],
             "description": "Common String Manipulations with regard to casing and singular/plural rules.",
@@ -545,7 +467,7 @@
                 "singularize",
                 "string"
             ],
-            "time": "2014-04-23 12:36:11"
+            "time": "2014-10-05 18:49:49"
         },
         {
             "name": "doctrine/lexer",
@@ -553,12 +475,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/lexer.git",
-                "reference": "db77c80d33d72e33a62b80581e9d150af85de556"
+                "reference": "83893c552fd2045dd78aef794c31e694c37c0b8c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/lexer/zipball/db77c80d33d72e33a62b80581e9d150af85de556",
-                "reference": "db77c80d33d72e33a62b80581e9d150af85de556",
+                "url": "https://api.github.com/repos/doctrine/lexer/zipball/83893c552fd2045dd78aef794c31e694c37c0b8c",
+                "reference": "83893c552fd2045dd78aef794c31e694c37c0b8c",
                 "shasum": ""
             },
             "require": {
@@ -581,19 +503,16 @@
             ],
             "authors": [
                 {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com",
-                    "homepage": "http://www.instaclick.com"
-                },
-                {
                     "name": "Roman Borschel",
                     "email": "roman@code-factory.org"
                 },
                 {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
                     "name": "Johannes Schmitt",
-                    "email": "schmittjoh@gmail.com",
-                    "homepage": "https://github.com/schmittjoh",
-                    "role": "Developer of wrapped JMSSerializerBundle"
+                    "email": "schmittjoh@gmail.com"
                 }
             ],
             "description": "Base library for a lexer that can be used in Top-Down, Recursive Descent Parsers.",
@@ -602,23 +521,21 @@
                 "lexer",
                 "parser"
             ],
-            "time": "2014-06-11 23:09:27"
+            "time": "2014-09-09 13:34:57"
         },
         {
             "name": "doubleleft/hook",
-            "version": "dev-dev",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doubleleft/hook.git",
-                "reference": "73609c613fb078f270e8feb1333a8878b060d531"
+                "reference": "44cec2653f7ba449e66f4c98e2d4bba22438e8cb"
             },
             "require": {
-                "aws/aws-sdk-php": "2.5.*",
                 "cboden/ratchet": "0.3.*",
                 "doctrine/dbal": "2.*",
-                "dropbox/dropbox-sdk": "1.1.*",
                 "duccio/apns-php": "dev-master",
-                "guzzle/guzzle": "3.7.*",
+                "guzzlehttp/guzzle": "4.2.*",
                 "illuminate/cache": "4.1.*",
                 "illuminate/config": "4.1.*",
                 "illuminate/database": "4.1.*",
@@ -630,8 +547,12 @@
                 "swiftmailer/swiftmailer": "5.0.*"
             },
             "require-dev": {
+                "aws/aws-sdk-php": "2.7.*",
                 "composer/composer": "dev-master",
+                "dropbox/dropbox-sdk": "1.1.*",
+                "microsoft/windowsazure": "*",
                 "mockery/mockery": "0.8.0",
+                "pear-pear.php.net/http_request2": "*",
                 "phpunit/phpunit": "3.7.*"
             },
             "type": "library",
@@ -662,45 +583,7 @@
                 "doubleleft",
                 "hook"
             ],
-            "time": "2014-08-25 02:11:46"
-        },
-        {
-            "name": "dropbox/dropbox-sdk",
-            "version": "v1.1.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/dropbox/dropbox-sdk-php.git",
-                "reference": "f8b215422e59eebf8f9df5c6054fe97786751ef5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/dropbox/dropbox-sdk-php/zipball/f8b215422e59eebf8f9df5c6054fe97786751ef5",
-                "reference": "f8b215422e59eebf8f9df5c6054fe97786751ef5",
-                "shasum": ""
-            },
-            "require": {
-                "ext-curl": "*",
-                "php": ">= 5.3"
-            },
-            "require-dev": {
-                "apigen/apigen": "2.8.1",
-                "phpunit/phpunit": "3.7.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Dropbox": "lib/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Dropbox SDK for PHP",
-            "keywords": [
-                "dropbox"
-            ],
-            "time": "2014-01-28 23:22:03"
+            "time": "2014-10-16 16:05:10"
         },
         {
             "name": "duccio/apns-php",
@@ -787,56 +670,23 @@
             "time": "2014-07-09 21:08:03"
         },
         {
-            "name": "guzzle/guzzle",
-            "version": "v3.7.4",
+            "name": "guzzle/common",
+            "version": "v3.9.2",
+            "target-dir": "Guzzle/Common",
             "source": {
                 "type": "git",
-                "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "b170b028c6bb5799640e46c8803015b0f9a45ed9"
+                "url": "https://github.com/guzzle/common.git",
+                "reference": "2e36af7cf2ce3ea1f2d7c2831843b883a8e7b7dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/b170b028c6bb5799640e46c8803015b0f9a45ed9",
-                "reference": "b170b028c6bb5799640e46c8803015b0f9a45ed9",
+                "url": "https://api.github.com/repos/guzzle/common/zipball/2e36af7cf2ce3ea1f2d7c2831843b883a8e7b7dc",
+                "reference": "2e36af7cf2ce3ea1f2d7c2831843b883a8e7b7dc",
                 "shasum": ""
             },
             "require": {
-                "ext-curl": "*",
-                "php": ">=5.3.3",
+                "php": ">=5.3.2",
                 "symfony/event-dispatcher": ">=2.1"
-            },
-            "replace": {
-                "guzzle/batch": "self.version",
-                "guzzle/cache": "self.version",
-                "guzzle/common": "self.version",
-                "guzzle/http": "self.version",
-                "guzzle/inflection": "self.version",
-                "guzzle/iterator": "self.version",
-                "guzzle/log": "self.version",
-                "guzzle/parser": "self.version",
-                "guzzle/plugin": "self.version",
-                "guzzle/plugin-async": "self.version",
-                "guzzle/plugin-backoff": "self.version",
-                "guzzle/plugin-cache": "self.version",
-                "guzzle/plugin-cookie": "self.version",
-                "guzzle/plugin-curlauth": "self.version",
-                "guzzle/plugin-error-response": "self.version",
-                "guzzle/plugin-history": "self.version",
-                "guzzle/plugin-log": "self.version",
-                "guzzle/plugin-md5": "self.version",
-                "guzzle/plugin-mock": "self.version",
-                "guzzle/plugin-oauth": "self.version",
-                "guzzle/service": "self.version",
-                "guzzle/stream": "self.version"
-            },
-            "require-dev": {
-                "doctrine/cache": "*",
-                "monolog/monolog": "1.*",
-                "phpunit/phpunit": "3.7.*",
-                "psr/log": "1.0.*",
-                "symfony/class-loader": "*",
-                "zendframework/zend-cache": "2.0.*",
-                "zendframework/zend-log": "2.0.*"
             },
             "type": "library",
             "extra": {
@@ -846,8 +696,56 @@
             },
             "autoload": {
                 "psr-0": {
-                    "Guzzle\\Tests": "tests/",
-                    "Guzzle": "src/"
+                    "Guzzle\\Common": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Common libraries used by Guzzle",
+            "homepage": "http://guzzlephp.org/",
+            "keywords": [
+                "collection",
+                "common",
+                "event",
+                "exception"
+            ],
+            "time": "2014-08-11 04:32:36"
+        },
+        {
+            "name": "guzzle/http",
+            "version": "v3.9.2",
+            "target-dir": "Guzzle/Http",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/http.git",
+                "reference": "1e8dd1e2ba9dc42332396f39fbfab950b2301dc5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/http/zipball/1e8dd1e2ba9dc42332396f39fbfab950b2301dc5",
+                "reference": "1e8dd1e2ba9dc42332396f39fbfab950b2301dc5",
+                "shasum": ""
+            },
+            "require": {
+                "guzzle/common": "self.version",
+                "guzzle/parser": "self.version",
+                "guzzle/stream": "self.version",
+                "php": ">=5.3.2"
+            },
+            "suggest": {
+                "ext-curl": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.7-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Guzzle\\Http": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -859,10 +757,166 @@
                     "name": "Michael Dowling",
                     "email": "mtdowling@gmail.com",
                     "homepage": "https://github.com/mtdowling"
-                },
+                }
+            ],
+            "description": "HTTP libraries used by Guzzle",
+            "homepage": "http://guzzlephp.org/",
+            "keywords": [
+                "Guzzle",
+                "client",
+                "curl",
+                "http",
+                "http client"
+            ],
+            "time": "2014-08-11 04:32:36"
+        },
+        {
+            "name": "guzzle/parser",
+            "version": "v3.9.2",
+            "target-dir": "Guzzle/Parser",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/parser.git",
+                "reference": "6874d171318a8e93eb6d224cf85e4678490b625c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/parser/zipball/6874d171318a8e93eb6d224cf85e4678490b625c",
+                "reference": "6874d171318a8e93eb6d224cf85e4678490b625c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.7-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Guzzle\\Parser": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Interchangeable parsers used by Guzzle",
+            "homepage": "http://guzzlephp.org/",
+            "keywords": [
+                "URI Template",
+                "cookie",
+                "http",
+                "message",
+                "url"
+            ],
+            "time": "2014-02-05 18:29:46"
+        },
+        {
+            "name": "guzzle/stream",
+            "version": "v3.9.2",
+            "target-dir": "Guzzle/Stream",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/stream.git",
+                "reference": "60c7fed02e98d2c518dae8f97874c8f4622100f0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/stream/zipball/60c7fed02e98d2c518dae8f97874c8f4622100f0",
+                "reference": "60c7fed02e98d2c518dae8f97874c8f4622100f0",
+                "shasum": ""
+            },
+            "require": {
+                "guzzle/common": "self.version",
+                "php": ">=5.3.2"
+            },
+            "suggest": {
+                "guzzle/http": "To convert Guzzle request objects to PHP streams"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.7-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Guzzle\\Stream": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
                 {
-                    "name": "Guzzle Community",
-                    "homepage": "https://github.com/guzzle/guzzle/contributors"
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "Guzzle stream wrapper component",
+            "homepage": "http://guzzlephp.org/",
+            "keywords": [
+                "Guzzle",
+                "component",
+                "stream"
+            ],
+            "time": "2014-05-01 21:36:02"
+        },
+        {
+            "name": "guzzlehttp/guzzle",
+            "version": "4.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/guzzle.git",
+                "reference": "66fd916e9f9130bc22c51450476823391cb2f67c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/66fd916e9f9130bc22c51450476823391cb2f67c",
+                "reference": "66fd916e9f9130bc22c51450476823391cb2f67c",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "guzzlehttp/streams": "~2.1",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "ext-curl": "*",
+                "phpunit/phpunit": "~4.0",
+                "psr/log": "~1.0"
+            },
+            "suggest": {
+                "ext-curl": "Guzzle will use specific adapters if cURL is present"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\": "src/"
+                },
+                "files": [
+                    "src/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
                 }
             ],
             "description": "Guzzle is a PHP HTTP client library and framework for building RESTful web service clients",
@@ -876,7 +930,60 @@
                 "rest",
                 "web service"
             ],
-            "time": "2013-10-02 20:47:00"
+            "time": "2014-10-05 19:29:14"
+        },
+        {
+            "name": "guzzlehttp/streams",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/streams.git",
+                "reference": "f91b721d73f0e561410903b3b3c90a5d0e40b534"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/streams/zipball/f91b721d73f0e561410903b3b3c90a5d0e40b534",
+                "reference": "f91b721d73f0e561410903b3b3c90a5d0e40b534",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\Stream\\": "src/"
+                },
+                "files": [
+                    "src/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "Provides a simple abstraction over streams of data (Guzzle 4+)",
+            "homepage": "http://guzzlephp.org/",
+            "keywords": [
+                "Guzzle",
+                "stream"
+            ],
+            "time": "2014-08-17 21:15:53"
         },
         {
             "name": "illuminate/cache",
@@ -1325,16 +1432,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "1.10.0",
+            "version": "1.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "9b42a1aec56011c2ac4d75c0ddad0794762344fc"
+                "reference": "5cb6e71055f7b0b57956b73d324cc4de31278f42"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/9b42a1aec56011c2ac4d75c0ddad0794762344fc",
-                "reference": "9b42a1aec56011c2ac4d75c0ddad0794762344fc",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/5cb6e71055f7b0b57956b73d324cc4de31278f42",
+                "reference": "5cb6e71055f7b0b57956b73d324cc4de31278f42",
                 "shasum": ""
             },
             "require": {
@@ -1367,7 +1474,7 @@
                 "datetime",
                 "time"
             ],
-            "time": "2014-07-18 03:44:47"
+            "time": "2014-09-26 02:52:02"
         },
         {
             "name": "react/event-loop",
@@ -1455,21 +1562,25 @@
         },
         {
             "name": "react/stream",
-            "version": "v0.4.1",
+            "version": "v0.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/stream.git",
-                "reference": "9db28e85a6fe7b57fad5e8c036f3434bcb8c8f60"
+                "reference": "acc7a5fec02e0aea674560e1d13c40ed0c8c5465"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/stream/zipball/9db28e85a6fe7b57fad5e8c036f3434bcb8c8f60",
-                "reference": "9db28e85a6fe7b57fad5e8c036f3434bcb8c8f60",
+                "url": "https://api.github.com/repos/reactphp/stream/zipball/acc7a5fec02e0aea674560e1d13c40ed0c8c5465",
+                "reference": "acc7a5fec02e0aea674560e1d13c40ed0c8c5465",
                 "shasum": ""
             },
             "require": {
                 "evenement/evenement": "~2.0",
                 "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "react/event-loop": "0.4.*",
+                "react/promise": "~2.0"
             },
             "suggest": {
                 "react/event-loop": "0.4.*",
@@ -1478,12 +1589,12 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.4-dev"
+                    "dev-master": "0.5-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "React\\Stream\\": ""
+                    "React\\Stream\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1495,7 +1606,7 @@
                 "pipe",
                 "stream"
             ],
-            "time": "2014-03-30 17:19:02"
+            "time": "2014-09-10 03:32:31"
         },
         {
             "name": "slim/slim",
@@ -1601,12 +1712,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/EventDispatcher.git",
-                "reference": "68ab3c3f50eae2b152075da722204d4de67f596f"
+                "reference": "e133748fd9165e24f8e9498ef5862f8bd37004e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/68ab3c3f50eae2b152075da722204d4de67f596f",
-                "reference": "68ab3c3f50eae2b152075da722204d4de67f596f",
+                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/e133748fd9165e24f8e9498ef5862f8bd37004e5",
+                "reference": "e133748fd9165e24f8e9498ef5862f8bd37004e5",
                 "shasum": ""
             },
             "require": {
@@ -1615,7 +1726,8 @@
             "require-dev": {
                 "psr/log": "~1.0",
                 "symfony/config": "~2.0",
-                "symfony/dependency-injection": "~2.0",
+                "symfony/dependency-injection": "~2.6",
+                "symfony/expression-language": "~2.6",
                 "symfony/stopwatch": "~2.2"
             },
             "suggest": {
@@ -1649,7 +1761,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "http://symfony.com",
-            "time": "2014-07-28 13:20:53"
+            "time": "2014-10-04 06:08:58"
         },
         {
             "name": "symfony/finder",
@@ -1658,12 +1770,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Finder.git",
-                "reference": "88a5de231a83cc5c2e213328a8036b188ff14cd4"
+                "reference": "cd03920154bc6669f64fbabb803d24cc8629964c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Finder/zipball/88a5de231a83cc5c2e213328a8036b188ff14cd4",
-                "reference": "88a5de231a83cc5c2e213328a8036b188ff14cd4",
+                "url": "https://api.github.com/repos/symfony/Finder/zipball/cd03920154bc6669f64fbabb803d24cc8629964c",
+                "reference": "cd03920154bc6669f64fbabb803d24cc8629964c",
                 "shasum": ""
             },
             "require": {
@@ -1696,7 +1808,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "http://symfony.com",
-            "time": "2014-08-14 14:51:32"
+            "time": "2014-09-27 08:35:25"
         },
         {
             "name": "symfony/http-foundation",
@@ -1705,12 +1817,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/HttpFoundation.git",
-                "reference": "d17938f07e168c4e5bb35c209d3c289ccff15d80"
+                "reference": "c24942a7ec2d8409d1f60d02c4460ca8317e885a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/d17938f07e168c4e5bb35c209d3c289ccff15d80",
-                "reference": "d17938f07e168c4e5bb35c209d3c289ccff15d80",
+                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/c24942a7ec2d8409d1f60d02c4460ca8317e885a",
+                "reference": "c24942a7ec2d8409d1f60d02c4460ca8317e885a",
                 "shasum": ""
             },
             "require": {
@@ -1739,19 +1851,17 @@
             ],
             "authors": [
                 {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org",
-                    "role": "Lead Developer"
-                },
-                {
                     "name": "Symfony Community",
                     "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
                 }
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "http://symfony.com",
-            "time": "2014-05-26 19:02:51"
+            "time": "2014-10-07 14:06:18"
         },
         {
             "name": "symfony/routing",
@@ -1760,12 +1870,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Routing.git",
-                "reference": "6e775cdd4e32c79bb14e3c760cfdee0182b2aaa7"
+                "reference": "6e43bd277f1f7e181a65b85813312f428e4926ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Routing/zipball/6e775cdd4e32c79bb14e3c760cfdee0182b2aaa7",
-                "reference": "6e775cdd4e32c79bb14e3c760cfdee0182b2aaa7",
+                "url": "https://api.github.com/repos/symfony/Routing/zipball/6e43bd277f1f7e181a65b85813312f428e4926ab",
+                "reference": "6e43bd277f1f7e181a65b85813312f428e4926ab",
                 "shasum": ""
             },
             "require": {
@@ -1776,6 +1886,7 @@
                 "psr/log": "~1.0",
                 "symfony/config": "~2.2",
                 "symfony/expression-language": "~2.4",
+                "symfony/http-foundation": "~2.3",
                 "symfony/yaml": "~2.0"
             },
             "suggest": {
@@ -1817,7 +1928,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2014-07-28 13:20:53"
+            "time": "2014-10-09 16:12:58"
         },
         {
             "name": "symfony/security-core",
@@ -1826,12 +1937,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/security-core.git",
-                "reference": "72e976aedd69d7a6f04e95b7df76e03109204ed7"
+                "reference": "46fe65e1cb18f037c9cd286d8c1bde11ff4b573b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/security-core/zipball/72e976aedd69d7a6f04e95b7df76e03109204ed7",
-                "reference": "72e976aedd69d7a6f04e95b7df76e03109204ed7",
+                "url": "https://api.github.com/repos/symfony/security-core/zipball/46fe65e1cb18f037c9cd286d8c1bde11ff4b573b",
+                "reference": "46fe65e1cb18f037c9cd286d8c1bde11ff4b573b",
                 "shasum": ""
             },
             "require": {
@@ -1843,7 +1954,7 @@
                 "symfony/event-dispatcher": "~2.1",
                 "symfony/expression-language": "~2.4",
                 "symfony/http-foundation": "~2.4",
-                "symfony/validator": "~2.2"
+                "symfony/validator": "~2.2,<2.5.0"
             },
             "suggest": {
                 "ircmaxell/password-compat": "For using the BCrypt password encoder in PHP <5.5",
@@ -1879,7 +1990,7 @@
             ],
             "description": "Symfony Security Component - Core Library",
             "homepage": "http://symfony.com",
-            "time": "2014-08-14 14:56:25"
+            "time": "2014-09-27 20:16:29"
         },
         {
             "name": "zordius/lightncandy",
