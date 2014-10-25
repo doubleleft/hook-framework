@@ -98,7 +98,7 @@ class Helper {
         foreach($options as $key => $value) {
             $key = isset($value['_id']) ? $value['_id'] : $key;
             $value = isset($value['name']) ? $value['name'] : $value;
-            $is_selected = ($selected_option == $value) ? ' selected="selected"' : '';
+            $is_selected = ($selected_option == $key) ? ' selected="selected"' : '';
             $html_options .= '<option value="' . $key . '"' . $is_selected . '>' . $value . '</option>';
         }
 

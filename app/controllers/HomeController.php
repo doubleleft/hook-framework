@@ -1,6 +1,6 @@
 <?php
 
-class HomeController extends Hook\Platform\Controller {
+class HomeController extends Controller {
     protected $layout = 'main';
 
     public function index() {
@@ -13,9 +13,9 @@ class HomeController extends Hook\Platform\Controller {
         ));
 
         $items = App::collection('items');
-        $this->render('index', array(
-            'item' => $items->first(),
-            'items' => $items->paginate()
+        $this->view('index', array(
+            'item' => App::collection('posts')->all(),
+            'items' => App::collection('posts')->paginate()
         ));
     }
 

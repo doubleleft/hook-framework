@@ -28,7 +28,8 @@
 {{ paginate items window=2 }}
 
 {{#form method="post"}}
-  {{ input "something" }}
+  {{ input "something" value="Default value" }}
+  {{ input "something" placeholder="Placeholder..." }}
   {{ select "options" options=items }}
 {{/form}}
 
@@ -36,9 +37,3 @@
   {{ input "something" }}
   {{ select "options" options=items }}
 {{/form_for}}
-
-<form action="" method="post" accept-charset="utf-8">
-  <p><input type="text" name="name" value="" id="name"></p>
-  <p><input type="text" name="value" value="" id="value"></p>
-  <p><input type="submit" value="Continue →"></p>
-</form>

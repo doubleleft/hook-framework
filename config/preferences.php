@@ -27,17 +27,26 @@ return array(
     'cache' => 'database',
 
     'aliases' => array(
+        'Controller' => 'Hook\\Platform\\Controller',
+
         // Hook\Model
         'App' => 'Hook\\Model\\App',
-        'Config' => 'Hook\\Model\\AppConfig',
+        'AppKey' => 'Hook\\Model\\AppKey',
+        'Collection' => 'Hook\\Model\\Collection',
+
+        // Hook\Application
+        'Context' => 'Hook\\Application\\Context',
+        'Config' => 'Hook\\Application\\Config',
 
         // Hook\Http
         'Cookie' => 'Hook\\Http\\Cookie',
         'Input' => 'Hook\\Http\\Input',
         'Request' => 'Hook\\Http\\Request',
+        'Response' => 'Hook\\Http\\Response',
         'Router' => 'Hook\\Http\\Router',
 
         // Utils
         'Mail' => 'Hook\\Mailer\\Mail'
     )
+
 );

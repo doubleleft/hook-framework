@@ -8,7 +8,7 @@
     "email": "edreyer@doubleleft.com"
   }],
   "autoload": {
-    "classmap": ["app/controllers"],
+    "classmap": [ "app/controllers", "app/models" ],
     "psr-0": {
       "Hook\\Platform": "src",
       "Hook\\CMS": "src",
