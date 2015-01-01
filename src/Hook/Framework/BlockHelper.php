@@ -1,7 +1,7 @@
-<?php namespace Hook\Platform;
+<?php namespace Hook\Framework;
 
 use Hook\Http\Router;
-use Hook\Platform\Helper;
+use Hook\Framework\Helper;
 
 class BlockHelper {
 
@@ -25,7 +25,7 @@ class BlockHelper {
             array_push($args, PHP_EOL.$options['fn']());
         }
 
-        return \Hook\Platform\Helper::link_to($args, $options['hash']);
+        return \Hook\Framework\Helper::link_to($args, $options['hash']);
     }
 
     //
@@ -50,7 +50,7 @@ class BlockHelper {
 
     public static function form_for($context, $options) {
         Router::getInstance()->view->context->push($context);
-        $html = \Hook\Platform\BlockHelper::form($context, $options);
+        $html = \Hook\Framework\BlockHelper::form($context, $options);
         Router::getInstance()->view->context->pop();
         return $html;
     }

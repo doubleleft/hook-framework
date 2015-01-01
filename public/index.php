@@ -15,7 +15,7 @@ if (isset($_SERVER['SERVER_SOFTWARE']) && preg_match('/Development Server/', $_S
 
 require ROOT_DIR . '/vendor/autoload.php';
 require ROOT_DIR . '/vendor/doubleleft/hook/src/bootstrap/helpers.php'; // hook helpers
-require ROOT_DIR . '/src/Hook/helpers.php'; // hook-platform helpers
+require ROOT_DIR . '/src/Hook/helpers.php'; // hook-framework helpers
 
 $config = require(ROOT_DIR . '/config/preferences.php');
 date_default_timezone_set($config['timezone']);
@@ -38,7 +38,7 @@ require ROOT_DIR . '/vendor/doubleleft/hook/src/bootstrap/connection.php';
 
 // setup custom pagination environment
 $connection = \DLModel::getConnectionResolver()->connection();
-$connection->setPaginator(new Hook\Platform\Environment());
+$connection->setPaginator(new Hook\Framework\Environment());
 
 // Set application key
 $app_key = null;
@@ -57,9 +57,9 @@ if (!$app->request->headers->get('X-App-Id'))
         file_put_contents($app->config('paths')['root'] . '.hook-config', json_encode($hook_config));
 
         // Migrate application tables
-        Hook\Database\AppContext::setKey($application->keys[0]);
-        Hook\Database\AppContext::migrate();
-        Hook\Database\AppContext::setTablePrefix('');
+        Hook\Application\Context::setKey($application->keys[0]);
+        Hook\Application\Context::migrate();
+        Hook\Application\Context::setTablePrefix('');
     }
 
     if ($app->request->isAjax()) {
@@ -76,10 +76,15 @@ foreach($app->config('aliases') as $alias => $source) {
     class_alias($source, $alias);
 }
 
+// setup default hook routes
 Router::setup($app);
 
+// configure view/template library (lightncandy)
 $app->config("templates.path", $app->config('paths')['root'] . "app/views");
 $app->config("templates.helpers_path", ROOT_DIR . '/app/helpers');
-$app->config("view", new Hook\Platform\View());
+$app->config("view", new Hook\Framework\View());
+
+// bind application routes
 require ROOT_DIR . 'app/config/routes.php';
+
 $app->run();

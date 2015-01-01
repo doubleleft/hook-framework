@@ -1,4 +1,4 @@
-<?php namespace Hook\Platform;
+<?php namespace Hook\Framework;
 
 use Hook\Http\Input;
 use Hook\Pagination\Paginator;

@@ -27,7 +27,7 @@ return array(
     'cache' => 'database',
 
     'aliases' => array(
-        'Controller' => 'Hook\\Platform\\Controller',
+        'Controller' => 'Hook\\Framework\\Controller',
 
         // Hook\Model
         'App' => 'Hook\\Model\\App',

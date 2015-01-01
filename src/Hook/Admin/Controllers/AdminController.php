@@ -1,6 +1,6 @@
 <?php namespace Hook\Admin\Controllers;
 
-use Hook\Platform\Controller;
+use Hook\Framework\Controller;
 
 use Hook\Http\Request;
 use Hook\Http\Cookie;

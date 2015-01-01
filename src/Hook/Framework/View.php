@@ -1,4 +1,4 @@
-<?php namespace Hook\Platform;
+<?php namespace Hook\Framework;
 
 use Hook\Http\Router;
 use Hook\Exceptions\NotFoundException;
@@ -80,30 +80,30 @@ class View extends \Slim\View
     protected function getHelpers() {
         $helpers = array(
             // core helpers
-            'yield' => 'Hook\\Platform\\Helper::yield',
+            'yield' => 'Hook\\Framework\\Helper::yield',
 
             // string helpers
-            'str_plural' => 'Hook\\Platform\\Helper::str_plural',
-            'str_singular' => 'Hook\\Platform\\Helper::str_singular',
-            'uppercase' => 'Hook\\Platform\\Helper::uppercase',
-            'lowercase' => 'Hook\\Platform\\Helper::lowercase',
-            'camel_case' => 'Hook\\Platform\\Helper::camel_case',
-            'snake_case' => 'Hook\\Platform\\Helper::snake_case',
+            'str_plural' => 'Hook\\Framework\\Helper::str_plural',
+            'str_singular' => 'Hook\\Framework\\Helper::str_singular',
+            'uppercase' => 'Hook\\Framework\\Helper::uppercase',
+            'lowercase' => 'Hook\\Framework\\Helper::lowercase',
+            'camel_case' => 'Hook\\Framework\\Helper::camel_case',
+            'snake_case' => 'Hook\\Framework\\Helper::snake_case',
 
             // url helpers
-            'link_to' => 'Hook\\Platform\\Helper::link_to',
-            'stylesheet' => 'Hook\\Platform\\Helper::stylesheet',
-            'javascript' => 'Hook\\Platform\\Helper::javascript',
+            'link_to' => 'Hook\\Framework\\Helper::link_to',
+            'stylesheet' => 'Hook\\Framework\\Helper::stylesheet',
+            'javascript' => 'Hook\\Framework\\Helper::javascript',
 
             // form helpers
-            'input' => 'Hook\\Platform\\Helper::input',
-            'select' => 'Hook\\Platform\\Helper::select',
+            'input' => 'Hook\\Framework\\Helper::input',
+            'select' => 'Hook\\Framework\\Helper::select',
 
             // integer helpers
-            'count' => 'Hook\\Platform\\Helper::count',
+            'count' => 'Hook\\Framework\\Helper::count',
 
             // miscelaneous
-            'paginate' => 'Hook\\Platform\\Helper::paginate'
+            'paginate' => 'Hook\\Framework\\Helper::paginate'
         );
 
         $helper_files = glob(Router::config('templates.helpers_path') . '/*');
@@ -117,14 +117,14 @@ class View extends \Slim\View
     protected function getBlockHelpers() {
         return array(
             // core helpers
-            'content_for' => 'Hook\\Platform\\BlockHelper::content_for',
+            'content_for' => 'Hook\\Framework\\BlockHelper::content_for',
 
             // url helpers
-            'link_to' => 'Hook\\Platform\\BlockHelper::link_to',
+            'link_to' => 'Hook\\Framework\\BlockHelper::link_to',
 
             // form helpers
-            'form' => 'Hook\\Platform\\BlockHelper::form',
-            'form_for' => 'Hook\\Platform\\BlockHelper::form_for'
+            'form' => 'Hook\\Framework\\BlockHelper::form',
+            'form_for' => 'Hook\\Framework\\BlockHelper::form_for'
         );
     }
 

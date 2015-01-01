@@ -1,6 +1,6 @@
 <?php namespace Hook\CMS;
 
-use Hook\Platform\Controller as BaseController;
+use Hook\Framework\Controller as BaseController;
 
 use Hook\Http\Router;
 use Hook\Http\Cookie;
@@ -22,7 +22,7 @@ class Controller extends BaseController
     public function index()
     {
         Cookie::set('admin', 1);
-        Request::redirect('/hook-platform');
+        Request::redirect('/hook-framework');
     }
 
 }

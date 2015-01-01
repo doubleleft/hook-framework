@@ -1,7 +1,7 @@
 {
-  "name": "doubleleft/hook-platform",
-  "description": "Hook Platform",
-  "keywords": ["hook", "platform", "doubleleft"],
+  "name": "doubleleft/hook-framework",
+  "description": "High productivity framework. Built on top of hook.",
+  "keywords": ["hook", "framework"],
   "license": "MIT",
   "authors": [{
     "name": "Endel Dreyer",
@@ -10,7 +10,7 @@
   "autoload": {
     "classmap": [ "app/controllers", "app/models" ],
     "psr-0": {
-      "Hook\\Platform": "src",
+      "Hook\\Framework": "src",
       "Hook\\CMS": "src",
       "Hook\\Admin": "src"
     }
@@ -31,7 +31,7 @@
     "post-install-cmd": [
       "chmod 777 public/storage",
       "chmod 777 shared",
-      "Hook\\Platform\\Installer::assets"
+      "Hook\\Framework\\Installer::assets"
     ]
   },
   "bin-dir": "bin",

@@ -13,9 +13,9 @@ class HomeController extends Controller {
         ));
 
         $items = App::collection('items');
-        $this->view('index', array(
-            'item' => App::collection('posts')->all(),
-            'items' => App::collection('posts')->paginate()
+        return $this->view('index', array(
+            'item' => $items->all(),
+            'items' => $items->paginate()
         ));
     }
 

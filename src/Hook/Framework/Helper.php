@@ -1,4 +1,4 @@
-<?php namespace Hook\Platform;
+<?php namespace Hook\Framework;
 
 use Hook\Http\Router;
 use Hook\Http\Request;
@@ -78,7 +78,7 @@ class Helper {
         }
 
         if (isset($attributes['options'])) {
-            return \Hook\Platform\Helper::select($args, $attributes);
+            return \Hook\Framework\Helper::select($args, $attributes);
         }
 
         // use 'text' as default input type
