@@ -80,7 +80,7 @@ class View extends \Slim\View
     protected function getHelpers() {
         $helpers = array(
             // core helpers
-            'yield' => 'Hook\\Framework\\Helper::yield',
+            'yield' => 'Hook\\Framework\\Helper::yieldContent',
 
             // string helpers
             'str_plural' => 'Hook\\Framework\\Helper::str_plural',

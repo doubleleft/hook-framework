@@ -9,7 +9,7 @@ class Helper {
     // Core helpers
     //
 
-    public static function yield($args) {
+    public static function yieldContent($args) {
         $content = isset($args[0]) ? $args[0] : '__yield__';
         $yield_blocks = Router::getInstance()->view->yield_blocks;
         return array(isset($yield_blocks[$content]) ? $yield_blocks[$content] : "", 'raw');
