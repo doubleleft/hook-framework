@@ -34,6 +34,7 @@ $app = new \Slim\Slim($config);
 $app->config('database', require(ROOT_DIR . '/config/database.php'));
 $app->config('paths', require(ROOT_DIR . '/config/paths.php'));
 
+Hook\Http\Router::setInstance($app);
 require ROOT_DIR . '/vendor/doubleleft/hook/src/bootstrap/connection.php';
 
 // setup custom pagination environment
