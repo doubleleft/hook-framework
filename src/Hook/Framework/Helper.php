@@ -94,6 +94,15 @@ class Helper {
         $options = array_remove($attributes, 'options');
         $selected_option = array_remove($attributes, 'selected');
 
+        if (!isset($attributes['name']) && isset($args[0])) {
+            // TODO: analyse context recursively
+            if (Router::getInstance()->view->context->count() > 0) {
+                $attributes['name'] = Router::getInstance()->view->context->top() . '['.$args[0].']';
+            } else {
+                $attributes['name'] = $args[0];
+            }
+        }
+
         $html_options = '';
         foreach($options as $key => $value) {
             $key = isset($value['_id']) ? $value['_id'] : $key;
