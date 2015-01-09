@@ -3,6 +3,8 @@ hook-framework
 
 High productivity framework. Built on top of [hook](https://github.com/doubleleft/hook).
 
+**[Documentation](https://github.com/doubleleft/hook-framework/wiki/Home/)**
+
 **Requirements:** PHP 5.4+
 
 Features
@@ -13,6 +15,8 @@ Features
 
 Development server
 ---
+
+Download and install [hook-cli](https://github.com/doubleleft/hook-cli).
 
 ```
 $ hook server
