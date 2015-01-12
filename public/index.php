@@ -33,8 +33,8 @@ $config = array_merge($config, require(ROOT_DIR . '/config/security.php'));
 $app = new \Slim\Slim($config);
 $app->config('database', require(ROOT_DIR . '/config/database.php'));
 $app->config('paths', require(ROOT_DIR . '/config/paths.php'));
-
 Hook\Http\Router::setInstance($app);
+
 require ROOT_DIR . '/vendor/doubleleft/hook/src/bootstrap/connection.php';
 
 // setup custom pagination environment
@@ -77,15 +77,12 @@ foreach($app->config('aliases') as $alias => $source) {
     class_alias($source, $alias);
 }
 
-// setup default hook routes
-Router::setup($app);
-
 // configure view/template library (lightncandy)
 $app->config("templates.path", $app->config('paths')['root'] . "app/views");
 $app->config("templates.helpers_path", ROOT_DIR . '/app/helpers');
 $app->config("view", new Hook\Framework\View());
 
 // bind application routes
-require ROOT_DIR . 'app/config/routes.php';
+require ROOT_DIR . 'config/routes.php';
 
 $app->run();

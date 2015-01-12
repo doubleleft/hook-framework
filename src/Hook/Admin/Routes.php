@@ -6,7 +6,7 @@ class Routes
 {
 
     public static function mounted($path) {
-        Router::mount('/admin', '\\Hook\\Admin\\Controllers\\AdminController');
+        return Router::mount('/admin', '\\Hook\\Admin\\Controllers\\AdminController');
     }
 
 }
